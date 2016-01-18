@@ -6,8 +6,8 @@
     <title>School Transfers</title>
     <link rel="stylesheet" href="css/foundation.css" />
     <!-- Latest compiled and minified CSS -->
-
     <link rel="stylesheet" type="text/css" href="css/app.css">
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.min.js"></script>
@@ -30,31 +30,25 @@
   <div class="inner-wrap">
     <nav class="tab-bar">
       <section class="left-small">
-        <a class="left-off-canvas-toggle menu-icon" href="#"><span></span></a>
+        <a href="http://www.northbynorthwestern.com"><img src="css/logo.png"></a>
       </section>
-
-      <section class="middle tab-bar-section">
-        <h1 class="title">Transfers</h1>
-      </section>
-
 
       <section class="right-small">
         <a class="right-off-canvas-toggle menu-icon" href="#"><span></span></a>
       </section>
     </nav>
 
-    <aside class="left-off-canvas-menu">
+
+    <aside class="right-off-canvas-menu">
       <ul class="off-canvas-list">
+
         <li><label>Years</label></li>
         <li ng-repeat="year in years">
               <input ng-model="$parent.selected_year" type="radio" name="years" ng-value="year" id="year_{{ year }}" data-toggle="button">
               <label class="button" for="year_{{ year }}">{{ year }}</label>
         </li>
-      </ul>
-    </aside>
 
-    <aside class="right-off-canvas-menu">
-      <ul class="off-canvas-list">
+
         <li><label>Filters</label></li>
             <li ng-repeat="filter in filters">
               <input ng-model="filter.hide" id="{{ filter.name }}" type="checkbox" data-toggle="button">
@@ -65,7 +59,12 @@
 
     <section class="main-section">
       <!-- content goes here -->
-            <div class="large-7 small-10 small-centered columns" role="content">
+          <div class="large-6 small-10 small-centered columns" role="content">
+            <hr>
+            <h1> Northwestern Transfers </h1>
+            <h4> 2005-2006 through 2014-2015 </h4>
+            <hr>
+            <h6> Transferring between Northwestern schools is a lot more common than you think: but what are the actual statistics? NBN is here with an interactive chart to show where your schools' transfers came from. Click on a year in the top right to begin. </h6>
           <article>
           <chord-diagram></chord-diagram>
           <!-- <h6 class="text-center">School Transfers: <span>{{ selected_year }}</span></h6> -->

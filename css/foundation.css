@@ -43,7 +43,7 @@ body {
   color: #2d302f;
   padding: 0;
   margin: 0;
-  font-family: "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
+  font-family: "PT Sans", sans-serif;
   font-weight: normal;
   font-style: normal;
   line-height: 1.5;
@@ -4387,7 +4387,7 @@ dialog {
 
 .tab-bar {
   -webkit-backface-visibility: hidden;
-  background: #333333;
+  background: black; /*#333333;*/
   color: white;
   height: 2.8125rem;
   line-height: 2.8125rem;
@@ -4456,6 +4456,7 @@ dialog {
     width: 1rem; }
   .tab-bar .menu-icon span:hover:after {
     box-shadow: 0 0px 0 1px #b3b3b3, 0 7px 0 1px #b3b3b3, 0 14px 0 1px #b3b3b3; }
+
 
 .left-off-canvas-menu {
   -webkit-backface-visibility: hidden;
