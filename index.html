@@ -4,6 +4,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable = no" />
     <title>School Transfers</title>
+    <link rel=stylesheet href="http://apps.northbynorthwestern.com/hungry/styles/22738433.main.css">
     <link rel="stylesheet" href="css/foundation.css" />
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" type="text/css" href="css/app.css">
@@ -59,12 +60,13 @@
 
     <section class="main-section">
       <!-- content goes here -->
-          <div class="large-6 small-10 small-centered columns" role="content">
+          <div class="large-7 small-10 small-centered columns" role="content">
             <hr>
-            <h1> Northwestern Transfers </h1>
+            <h1> Tracking the Transfers </h1>
             <h4> 2005-2006 through 2014-2015 </h4>
             <hr>
-            <h6> Transferring between Northwestern schools is a lot more common than you think: but what are the actual statistics? NBN is here with an interactive chart to show where your schools' transfers came from. Click on a year in the top right to begin. </h6>
+            <p> Choosing a major can be tough. Though we all know the lucky few who have followed their four-year college plan to the point, for the majority of us, finding a path through college is a lot less straightforward. Fortunately, you're probably not alone: at Northwestern, over three hundred students not only switch majors, but also transfer into entirely different schools every year. Some of the statistics regarding where the transfers from each school come from can be surprising, however.</p> <br>
+            <h6> Choose a year from the top right to learn more. </h6>
           <article>
           <chord-diagram></chord-diagram>
           <!-- <h6 class="text-center">School Transfers: <span>{{ selected_year }}</span></h6> -->
@@ -77,6 +79,14 @@
   </div>
 </div>
 
+  <div class = "small-9 small-centered columns">
+    <h3> Reading the Chart </h3>
+    <p> Each portion of the diagram relates to the number of students who have transferred to that school; the larger the segment, the larger the proportion of transfers. If the flow of transfers is dominated by one school, the segment is colored by the dominating school. Clicking on a school eliminates it from the chart, allowing for clearer viewable relationships between specific schools.</p>
+    <p> Throughout most of Northwestern history, Weinberg, Communication, and SESP dominate most of the transfer flows, taking up the majority of each chart. This is mostly unsurprising, as these three schools are among the largest at Northwestern; however, this fact is notable for demonstrating the more flexible course requirements of each school. Compare this to McCormick, Medill and Bienen, which collectively take in a quarter of transfers - these three schools demand a rigorous selection of mandatory first and second-year core classes, which makes transferring into these schools even after your first year incredibly difficult.  </p>
+
+    <p> When reading the chart, also take note of the most popular places that each school transfers from: for example, while McCormick transfers come overwhelmingly from Bienen, Bienen transfers can come from up to four other schools. See if you can learn something surprising about where the transfers from your own school come from! </p>
+
+    </div>
 
       <fieldset id="tooltip" class="row secondary">
         <div class="large-6 small-6 columns">
@@ -93,14 +103,7 @@
 
     <!--</div>-->
 
-    <footer class="row">
-      <div class="large-12 columns">
-        <ul class="inline-list left">
-          <li>Production by: Matthew Zhang and Hayley Hu </li>
-          <li>Data from Northwestern Registrar</li>
-        </ul>
-      </div>
-    </footer>
+    <footer class=nbn-footer> <div class=container> <div class="credits shift-left"> <p><strong>Published on January 20, 2016</strong></p> <p><strong>Design and Development</strong>: Matthew Zhang and Hayley Hu <p><strong>Data: </strong>Northwestern Institutional Research</p> <p>&copy; 2016 <a href="http://www.northbynorthwestern.com/">North by Northwestern</a></p> </div> </div> </footer>
 
     <script src="http://projects.delimited.io/experiments/chord-transitions/bower_components/d3/d3.min.js"></script>
     <script src="http://projects.delimited.io/experiments/chord-transitions/bower_components/foundation/js/foundation.min.js"></script>

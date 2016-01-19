@@ -59,6 +59,7 @@ input[data-toggle]:checked + label:active {
 h4, h6 {
   text-align: center; 
   margin: auto;
+  font-weight: 500;
 }
 h1 {
   margin: auto;
@@ -66,3 +67,4 @@ h1 {
   font-weight: 900;
   font-color: black;
 }
+
