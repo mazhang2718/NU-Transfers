@@ -3,7 +3,8 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable = no" />
-    <title>School Transfers</title>
+    <link rel="shortcut icon" href="http://media.northbynorthwestern.com/media/img/favicon-hi.ico"> 
+    <title>Tracking the Transfers</title>
     <link rel=stylesheet href="http://apps.northbynorthwestern.com/hungry/styles/22738433.main.css">
     <link rel="stylesheet" href="css/foundation.css" />
     <!-- Latest compiled and minified CSS -->
@@ -27,57 +28,73 @@
 
   -->
 
-<div class="off-canvas-wrap" data-offcanvas>
-  <div class="inner-wrap">
-    <nav class="tab-bar">
-      <section class="left-small">
-        <a href="http://www.northbynorthwestern.com"><img src="css/logo.png"></a>
-      </section>
+<a id="top">
+  <header class="masthead"> 
+    <div class="logo"> 
+      <a href="//www.northbynorthwestern.com/"><img class=nbn-logo src=http://media.northbynorthwestern.com.s3.amazonaws.com/uploads/2015/04/25/nbn_logo_black.svg alt=""></a> 
+    </div> 
+  </header>
+</a> 
 
-      <section class="right-small">
-        <a class="right-off-canvas-toggle menu-icon" href="#"><span></span></a>
-      </section>
-    </nav>
+<br><br><br>
 
-
-    <aside class="right-off-canvas-menu">
-      <ul class="off-canvas-list">
-
-        <li><label>Years</label></li>
-        <li ng-repeat="year in years">
-              <input ng-model="$parent.selected_year" type="radio" name="years" ng-value="year" id="year_{{ year }}" data-toggle="button">
-              <label class="button" for="year_{{ year }}">{{ year }}</label>
-        </li>
-
-
-        <li><label>Filters</label></li>
-            <li ng-repeat="filter in filters">
-              <input ng-model="filter.hide" id="{{ filter.name }}" type="checkbox" data-toggle="button">
-              <label class="button" for="{{ filter.name }}">{{ filter.name }}</label>
-            </li>
-      </ul>
-    </aside>
-
-    <section class="main-section">
-      <!-- content goes here -->
-          <div class="large-7 small-10 small-centered columns" role="content">
+          <div class="large-6 small-10 small-centered columns" role="content">
             <hr>
             <h1> Tracking the Transfers </h1>
             <h4> 2005-2006 through 2014-2015 </h4>
             <hr>
             <p> Choosing a major can be tough. Though we all know the lucky few who have followed their four-year college plan to the point, for the majority of us, finding a path through college is a lot less straightforward. Fortunately, you're probably not alone: at Northwestern, over three hundred students not only switch majors, but also transfer into entirely different schools every year. Some of the statistics regarding where the transfers from each school come from can be surprising, however.</p> <br>
-            <h6> Choose a year from the top right to learn more. </h6>
-          <article>
-          <chord-diagram></chord-diagram>
-          <!-- <h6 class="text-center">School Transfers: <span>{{ selected_year }}</span></h6> -->
-        </article>
+            <h6> Choose a year below to learn more. </h6>
+            <br>
+          
               </div>
-    </section>
 
-  <a class="exit-off-canvas"></a>
 
   </div>
 </div>
+
+
+      <div class="rows">
+        <!--<h3> Years: </h3>-->
+        <div class="small-12 small-centered columns">
+              <ul class="">
+              <li ng-repeat="year in years">
+              <input ng-model="$parent.selected_year" type="radio" name="years" ng-value="year" id="year_{{ year }}" data-toggle="button">
+              <label class="btn" for="year_{{ year }}">{{ year }}</label>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+<br>
+
+      <h6> Click on a school to eliminate it from the chart. </h6>
+      <br>
+
+      <div class="row">
+             
+      <div class="small-9 small-centered columns">
+        <ul class="">
+            <li ng-repeat="filter in filters">
+              <input ng-model="filter.hide" id="{{ filter.name }}" type="checkbox" data-toggle="button" id="filterer">
+              <label class="btn" for="{{ filter.name }}">{{ filter.name }}</label>
+            </li>
+            </div>
+          </ul>
+        </div>
+      </div>
+
+
+<div class="row">
+ <div class="large-8 medium-10 small-12 small-centered columns" role="content">
+  <article>
+          <chord-diagram></chord-diagram>
+          <!-- <h6 class="text-center">School Transfers: <span>{{ selected_year }}</span></h6> -->
+        </article>
+      </div>
+</div>
+
+
 
   <div class = "small-9 small-centered columns">
     <h3> Reading the Chart </h3>
