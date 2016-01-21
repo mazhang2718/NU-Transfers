@@ -68,7 +68,7 @@ h4, h6 {
   font-weight: 500;
 }
 
-h3 {
+h2 {
   text-align: center;
 }
 h1 {
@@ -94,6 +94,11 @@ li
   display: inline;
   margin: 0;
   padding: 0px;
+}
+
+ol li 
+{
+  display: block;
 }
 
 li.ng-scope {
@@ -145,4 +150,3 @@ label.button.ng-binding {
     margin-bottom: 1em;
   }
 }
-
